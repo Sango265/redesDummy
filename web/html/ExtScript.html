@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Ext Script </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script src="../js/JavaScript.js"></script>
+        <script src="../js/JQuery.js"></script>
+
+        <script> $(document).ready(myFunction);</script>
+
+    </head>
+
+    <body>
+        <h1> Ext Script </h1>
+
+
+            <script>mobileWrite();</script>
+            <input type="button" onclick="popup()" value="Click Me!">
+
+
+            <h1> Validate Form </h1>
+            <form name="myForm" action="demo_form.php" onsubmit="return validateForm()" method="post">
+                First name: <input type="text" name="fname"><br>
+                Email: <input type="text" name="email">
+                <input type="submit" value="Submit">
+            </form>
+
+
+
+        <h1 id="h01"></h1>
+
+        <button type="button" id ="hide">Hide</button>
+        <button type="button" id="show">Show</button>
+        <ol> Lista
+            <li>Café</li>
+            <li>Leche</li>
+            <li>Azucar</li>
+            <li>Pan</li>
+            <li>Mermelada</li>
+        </ol>
+
+        <button type="button" id ="fadeIn">Fade In</button>
+        <button type="button" id="fadeOut">Fade Out</button>
+        <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+        <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+        <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div><br><br>
+
+        <button type="button" id="anim">Anim</button>
+        <div style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div><br><br><br><br><br><br><br><br><br><br>
+
+<p id="test1">This is a paragraph.</p>
+<p id="test2">This is another paragraph.</p>
+<p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+<button id="btn1">Set Text</button>
+<button id="btn2">Set HTML</button>
+<button id="btn3">Set Value</button>
+
+<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+<button id="btn4">Show Text</button>
+<button id="btn5">Show HTML</button>
+
+
+<br><img src="../images/Metroid.jpg" alt="jQuery" width="100" height="140">
+<br><br>
+<button id="btn6">Insert before</button>
+<button id="btn7">Insert after</button><br>
+<img src="../images/Metroid.jpg" alt="jQuery" width="100" height="140">
+<br>
+<img src="../images/Metroid.jpg" id="lol" alt="jQuery" width="100" height="140">
+
+
+            <br><br><br><br><br><br><br><br>
+            <a href="http://www.w3schools.com/js/default.asp">Referencia</a><br>
+            <a href="http://jquery.com/download/">JQuery</a><br>
+
+    </body>
+
+</html>

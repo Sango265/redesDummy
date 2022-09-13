@@ -1,0 +1,29 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Upload File</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        
+        <h1>GET Method</h1><br>
+        <form name="inputGet" action="../UploadFileServlet" method="get"  enctype="multipart/form-data" id="myFormGet">
+            Name: <input type="text" name="Name"><br>
+            Password: <input type="password" name="Password"><br>
+            Archivo: <input type="file" name="File"><br>
+            <input type="submit" value="Enviar Archivo">
+        </form>
+        <br>
+        <h1>POST Method</h1><br>
+        <form name="inputPost" action="../UploadFileServlet" method="post"  enctype="multipart/form-data" size="50" id="myFormPost">
+            Name: <input type="text" name="Name"><br>
+            Password: <input type="password" name="Password"><br>
+            Archivo: <input type="file" name="File"><br>
+            <input type="submit" value="Enviar Archivo">
+        </form>
+    </body>
+</html>

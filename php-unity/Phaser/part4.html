@@ -1,0 +1,157 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>Making your first Phaser 3 Game - Part 4</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    var config = {
+        type: Phaser.AUTO,
+        width: 800,
+        height: 600,
+        physics: {
+            default: 'arcade',
+            arcade: {
+                gravity: { y: 0 },
+                debug: false
+            }
+        },
+        scene: {
+            preload: preload,
+            create: create,
+            update: update
+        }
+    };
+
+    var platforms;
+    var player;
+    var cursors;
+    var table;
+    var mouse;
+    var stars;
+    var score = 0;
+    var scoreText;
+
+    var game = new Phaser.Game(config);
+
+    function preload ()
+    {
+        this.load.image('sky', 'assets/textureg.png');
+        this.load.image('bloque1', 'assets/ctext.png');
+        this.load.image('bloque2', 'assets/atext.png');
+        this.load.image('ground', 'assets/platform.png');
+        this.load.image('star', 'assets/star.png');
+        this.load.image('bomb', 'assets/bomb.png');
+        this.load.spritesheet('dude', 'assets/sphere.png', { frameWidth: 32, frameHeight: 48 });
+    }
+
+    function create ()
+    {
+        this.add.image(400, 300, 'sky');
+
+        //platforms for the ball
+        platforms = this.physics.add.staticGroup();
+        //var value = Phaser.Math.Between(0, 1);
+        var value;
+        console.log (value);
+        for (var i = 0; i < 16; i++) 
+        {
+            for (var j = 0; j < 10; j++) 
+            {
+                value = Phaser.Math.Between(0, 1);
+                if(value == 0)
+                {platforms.create(20 + (i * 50), 16 + (j * 35), 'bloque1').setScale(.3,.2).refreshBody();}
+                else
+                {platforms.create(20 + (i * 50), 16 + (j * 35), 'bloque2').setScale(.040,.038).refreshBody();}
+            }
+        }
+        //for the stars
+        stars = this.physics.add.staticGroup();
+        for (var i = 0; i < 16; i++) 
+        {
+            for (var j = 0; j < 10; j++) 
+            {
+                value = Phaser.Math.Between(0, 1);
+                if(value == 0)
+                {stars.create(20 + (i * 50), 16 + (j * 35), 'star').setScale(1,1).refreshBody();}
+            }
+        }
+
+        //Table for the player
+        table = this.physics.add.staticGroup();
+        table.create(400, 560, 'ground').setScale(20,1).refreshBody();
+
+        //Player
+        player = this.physics.add.sprite(400, 400, 'dude').setScale(1,1);
+
+        //bounceforce of the ball
+        player.setBounce(1.1);
+        player.setCollideWorldBounds(true);
+
+        //text
+        scoreText = this.add.text(590, 540, 'score: 0', { fontSize: '40px', fill: '#001' });
+
+        cursors = this.input.keyboard.createCursorKeys();
+
+        this.physics.add.collider(player, table);
+        this.physics.add.collider(player, platforms);
+        this.physics.add.collider(player, stars);
+
+        this.physics.add.overlap(player, platforms, platformscollider, null, this);
+
+    }
+
+    function update ()
+    {
+        //Arreglar 
+        if (cursors.up.isDown)
+        {
+            player.setVelocityY(160);
+        }
+        if (cursors.down.isDown)
+        {
+            player.setVelocityY(-160);
+        }
+        if (cursors.right.isDown)
+        {
+            player.setVelocityX(160);
+        }
+        if (cursors.left.isDown)
+        {
+            player.setVelocityX(160);
+        }
+/*        else
+        {
+            player.setVelocityX(-160);
+        }*/
+       
+    }
+
+    //coallision to desapear
+    function platformscollider(player,platforms,stars)
+    {
+        platforms.disableBody(true, true);
+        //to destroy the stars
+        //stars.disableBody(true, true);
+
+        score += 5;
+        scoreText.setText('Score: ' + score);
+    }
+
+
+
+
+
+</script>
+
+</body>
+</html>

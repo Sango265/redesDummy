@@ -1,0 +1,91 @@
+
+
+
+IMG.displayed {
+	display: block;
+	margin-left: auto;
+	margin-right: auto }
+
+body
+{
+    background-color:#b0c4de;
+}
+
+
+
+
+h1,h2 {
+
+	font-family: cursive;
+	font-style: normal;
+	text-align: center;
+	text-indent: 0ex;
+}
+
+p
+{
+color:blue;
+text-align:center;
+}
+.marked
+{
+background-color:red;
+}
+.marked p
+{
+color:white;
+}
+
+ol {
+    list-style: decimal;
+    margin: 10;
+    padding: 10;
+    text-align: left;
+}
+
+ul {
+    list-style: circle;
+    margin: 10;
+    padding: 10;
+    text-align: left;
+}
+
+li {
+    display:inline;
+}
+
+
+div.background
+  {
+  width:500px;
+  height:250px;
+  background:url(../images/Metroid.jpg) repeat;
+  border:2px solid black;
+  }
+div.transbox
+  {
+  width:400px;
+  height:180px;
+  margin:30px 50px;
+  background-color:#ffffff;
+  border:1px solid black;
+  opacity:0.6;
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+  }
+div.transbox p
+  {
+  margin:30px 40px;
+  font-weight:bold;
+  color:#000000;
+  }
+
+table 
+{
+width:50%;
+}
+
+td
+{
+text-align:right;
+}
+

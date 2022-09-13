@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+
+    </head>
+    <body>
+
+        <video width="640" height="360" controls>
+            <source src="../videos/God.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+<br>
+         <canvas id="myCanvas" width="200" height="100" style="border:1px solid #AA00AA;">
+        </canvas> 
+<br>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+            <polygon points="100,10 40,180 190,60 10,60 160,180" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;">
+        </svg>
+<br>
+
+        <audio controls>
+            <source src="../music/Warriors.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+    <form name="input" action="html_form_action.asp" method="get" id="myForm">
+<br><br><br>
+        Select your favorite color: <input type="color" name="favcolor">
+<br><br>
+        Birthday: <input type="date" name="bday">
+<br><br>
+        Birthday (date and time): <input type="datetime" name="bdaytime">
+<br><br>
+        Birthday (date and time local): <input type="datetime-local" name="bdaytime">
+<br><br>
+        E-mail: <input type="email" name="email">
+<br><br>
+        Birthday (month and year): <input type="month" name="bdaymonth">
+<br><br>
+        Quantity (between 1 and 5): <input type="number" name="quantity" min="1" max="5">
+<br><br>
+        Range: <input type="range" name="points" min="1" max="10">
+<br><br>
+        Search Google: <input type="search" name="googlesearch">
+<br><br>
+        Telephone: <input type="tel" name="usrtel">
+<br><br>
+        Select a time: <input type="time" name="usr_time">
+<br><br>
+        Add your homepage: <input type="url" name="homepage">
+<br><br>
+        Select a week: <input type="week" name="week_year">
+<br><br>
+        <input list="browsers" name="browser">
+            <datalist id="browsers">
+              <option value="Internet Explorer">
+              <option value="Firefox">
+              <option value="Chrome">
+              <option value="Opera">
+              <option value="Safari">
+            </datalist>
+<br><br>
+  First name:<input type="text" name="fname" autofocus><br><!-- Cuando se abre la pagina, este elemento ya esta seleccionado-->
+  Last name: <input type="text" name="lname"><br>
+
+
+
+<input type="submit">
+
+
+
+    </form>
+<br><br
+Last name: <input type="text" name="lname" form="myForm">
+<br><br><br><br>
+
+    </body>
+</html> 

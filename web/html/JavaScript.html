@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Java Script </title>
+
+    </head>
+
+    <body>
+        <h1> JavaScript </h1>
+            <a href="HeadBody.html">Link HeadBodyScripts</a><br>
+            <a href="ExtScript.html">Link ExtScript</a><br>
+            <a href="X.html">Link X</a><br>
+
+
+           <script type="text/javascript">
+                    document.write("<h1> Variables </h1>");
+                //No es tipado y no es necesario escribir var, pero
+                var numero1 = 10;// esta es local  //int 
+                numero2 = 10.5;//y esta es variable global  //float
+                var suma = numero1 + numero2;
+                document.write("<p>Resultado: " + suma + "</p>");
+
+                var c = 'a';  //char
+                var s = "Hola"; //String
+                var b = true;  //boolean
+                
+
+
+                    document.write("<h1> Arreglos </h1>");
+                var arreglo1 = ["Lunes", "Martes"];
+                arreglo1[2] = "Miercoles";
+                arreglo1[4] = "Viernes";
+
+                for(var i = 0; i < arreglo1.length; i++){
+                    document.write("<p>1 Arreglo1: " + i + " " + arreglo1[i] + "</p>");
+                }
+                    document.write("<br><br>");
+                for(var i = 0; i < 7; i++){
+                    document.write("<p>2 Arreglo1: " + i + " " + arreglo1[i] + "</p>");
+                }
+                    document.write("<br><br>");
+                var i = 0;
+                while(i < arreglo1.length){
+                    document.write("<p>3 Arreglo1: " + i + " " + arreglo1[i] + "</p>");
+                    i++;
+                }
+                    document.write("<br><br>");
+
+                var arreglo2 = [1,2,3,4,5,6,7];
+
+                    document.write("<h1> Control </h1>");
+                var boolean = true;
+                if(boolean){document.write("A<br>");documenboolean = false;} else{document.write("B<br>");}
+                if(boolean){document.write("C<br>");boolean = false;} else{document.write("D<br>");}
+                    document.write("<h1> Funciones </h1>");
+
+                function al(){
+                    var hola = "Hola<br>";
+                    document.write(hola);
+                }
+
+                document.write("------------");
+
+                for(var i = 0; i < 3; i++){al();}
+                    document.write("<br><br>");
+
+                function sumaf(numero1, numero3){al();
+                    resultado = numero1 + numero3;
+                    document.write("Suma: " + resultado + "<br>");
+                }
+
+                function sumafl(){
+                    resultado = numero8 + numero9;
+                    document.write("Sumaf2: " + resultado + "<br>");
+                }
+
+                var numero4 = 6;
+                var numero5 = 7;
+                sumaf(numero4, numero5);
+
+                var numero8 = 1;
+                var numero9 = 2;
+                sumafl();
+
+                numero8 += 1;
+                numero9 += 2;
+                sumafl();
+
+                numero8 += 1;
+                numero9 += 2;
+                sumafl();
+
+
+           </script>
+
+
+
+
+
+            <br><br>
+            <a href="http://www.youtube.com/watch?v=Mfmf83XC5Uw">Referencia</a><br>
+            <a href="http://jquery.com/download/">JQuery</a><br>
+
+    </body>
+
+</html>
